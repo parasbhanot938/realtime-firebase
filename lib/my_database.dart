@@ -84,11 +84,9 @@ class _DataBaseState extends State<DataBase> {
                     // });
                     chatModel.name = messageController.value.text;
                     chatModel.dateTime = DateTime.now().toString();
-                    realtimeDatabase
-                        .ref("Data")
-                        .child("Apna Data")
-                        .push()
-                        .set(chatModel.toJson());//pushing data or our model in real time database
+                    realtimeDatabase.ref("Data").child("Apna Data").push().set(
+                        chatModel
+                            .toJson()); //pushing data or our model in real time database
 
                     // realtimeDatabase.reference(
                     // ).child("Data").push().set({
